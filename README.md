@@ -43,3 +43,5 @@ mounted: el挂载到实例后调用  beforeDestory: 实例销毁之前调用，�
 
 21.$nextTick就是用来知道什么时候DOM更新完成的
 
+22.table内规定只允许tr td th等表格元素，所以在table内直接使用组件是无效的，可以使用is来挂载组件
+
