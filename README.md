@@ -45,3 +45,11 @@ mounted: el挂载到实例后调用  beforeDestory: 实例销毁之前调用，�
 
 22.table内规定只允许tr td th等表格元素，所以在table内直接使用组件是无效的，可以使用is来挂载组件
 
+23.vue不允许在已经实例化的组件上添加新的动态根级响应属性（既直接挂载再data下的属性）但是可以使用Vue.set(object, key, value)方法添加响应式属性
+
+24.vue对Dom的更新是异步的。在需要人为操作DOM的场景下，为了在vue响应数据变化之后再更新Dom，可以手动调用Vue.nextTick(callback),并将DOM操作逻辑纺织在callback回调函数中，从而确保响应式更新完成之后再进行DOM操作
+
+25. _.debounce是lodash当中限制操作频率的函数
+
+26.通过jQuery对DOM进行的操作可以放置在Mounted属性上进行，即当Vue组件已经完成在DOM上挂载的时候。
+
