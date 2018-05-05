@@ -47,9 +47,15 @@ mounted: el挂载到实例后调用  beforeDestory: 实例销毁之前调用，�
 
 23.vue不允许在已经实例化的组件上添加新的动态根级响应属性（既直接挂载再data下的属性）但是可以使用Vue.set(object, key, value)方法添加响应式属性
 
-24.vue对Dom的更新是异步的。在需要人为操作DOM的场景下，为了在vue响应数据变化之后再更新Dom，可以手动调用Vue.nextTick(callback),并将DOM操作逻辑纺织在callback回调函数中，从而确保响应式更新完成之后再进行DOM操作
+24.vue对Dom的更新是异步的。在需要人为操作DOM的场景下，ssss为了在vue响应数据变化之后再更新Dom，可以手动调用Vue.nextTick(callback),并将DOM操作逻辑纺织在callback回调函数中，从而确保响应式更新完成之后再进行DOM操作
 
 25. _.debounce是lodash当中限制操作频率的函数
 
 26.通过jQuery对DOM进行的操作可以放置在Mounted属性上进行，即当Vue组件已经完成在DOM上挂载的时候。
+
+27.如果你有一个巨大的数组或object，并且数据不会更改，可以使用Object.freeze()提升 性能
+
+28.track-by是vue为循环提供的优化方法，可以复用多次v-for中id相同的dom。如果你的数据没有一个唯一的id，也可以选择使用track-by="$index"，但必须注意一些副作用。
+
+29.有时候需要直接在父组件中访问子组件实例，或者直接操作DOM元素，此时需要使用ref。ref被用来给元素或子元素注册引用信息。引用信息会根据父组件的$refs对象进行注册。如果在普通的DOM元素上使用，引用信息就是元素，如果用在子组件上，引用信息就是组件实例。
 
