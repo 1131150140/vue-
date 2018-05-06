@@ -92,7 +92,7 @@ vm = {
   $destroy: "完全销毁一个实例",
 }
  </pre>
-
+<pre>
  <html>
   v-text = "更新元素的textContent"
   v-html = "更新元素的innerHTML"
@@ -135,4 +135,4 @@ vm = {
   .lazy = "取代input监听change事件"
   .number = "输入字符串转为数字"
   .trim = "过滤输入的首尾空格" />  
-<
+</pre>
