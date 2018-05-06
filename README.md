@@ -59,7 +59,7 @@ mounted: el挂载到实例后调用  beforeDestory: 实例销毁之前调用，�
 
 29.有时候需要直接在父组件中访问子组件实例，或者直接操作DOM元素，此时需要使用ref。ref被用来给元素或子元素注册引用信息。引用信息会根据父组件的$refs对象进行注册。如果在普通的DOM元素上使用，引用信息就是元素，如果用在子组件上，引用信息就是组件实例。
 
-let vm = new Vue();
+<!-- let vm = new Vue();
 vm = {
   // Vue实例属性的代理
   $data: "被watch的data对象",
@@ -90,8 +90,8 @@ vm = {
   $nextTick: "将回调延迟到下次DOM更新循环之后执行",
   $destroy: "完全销毁一个实例",
 }
-
-<html
+ -->
+<!-- <html
   v-text = "更新元素的textContent"
   v-html = "更新元素的innerHTML"
   v-show = "根据表达式的true/false，切换HTML元素的display属性"
@@ -101,18 +101,18 @@ vm = {
   v-once = "只渲染元素和组件一次"
 ></html>
 <!-- 根据表达式的true和false来决定是否渲染元素 -->
-<div v-if="type === "A"">A</div>
+<!-- <div v-if="type === "A"">A</div>
 <div v-else-if="type === "B"">B</div>
 <div v-else-if="type === "C"">C</div>
-<div v-else>Not A/B/C</div>
+<div v-else>Not A/B/C</div> -->
 <!-- 动态地绑定属性或prop到表达式 -->
-<p v-bind:attrOrProp
+<!-- <p v-bind:attrOrProp
   .prop = "被用于绑定DOM属性"
   .camel = "将kebab-case特性名转换为camelCase"
   .sync = "语法糖，会扩展成一个更新父组件绑定值的v-on监听器"
-></p>
+></p> -->
 <!-- 绑定事件监听器 -->
-<button
+<!-- <button
   v-on:eventName
   .stop = "调用event.stopPropagation()"
   .prevent = "调用event.preventDefault()"
@@ -126,11 +126,11 @@ vm = {
   .passive = "以{passive: true}模式添加监听器"
   .{keyCode | keyAlias} = "触发特定键触事件"
 >
-</button>
+</button> -->
 <!-- 表单控件的响应式绑定 -->
-<input 
+<!-- <input 
   v-model
   .lazy = "取代input监听change事件"
   .number = "输入字符串转为数字"
-  .trim = "过滤输入的首尾空格" />
+  .trim = "过滤输入的首尾空格" />  -->
 
