@@ -93,7 +93,7 @@ vm = {
 }
  </pre>
 <pre>
- <html>
+ html
   v-text = "更新元素的textContent"
   v-html = "更新元素的innerHTML"
   v-show = "根据表达式的true/false，切换HTML元素的display属性"
@@ -101,20 +101,20 @@ vm = {
   v-pre = "跳过表达式渲染过程，可以显示原始的Mustache标签"
   v-cloak = "保持在HTML元素上直到关联实例结束编译，可以隐藏未编译的Mustache"
   v-once = "只渲染元素和组件一次"
-></html>
+>html
 根据表达式的true和false来决定是否渲染元素
- <div v-if="type === "A"">A</div>
-<div v-else-if="type === "B"">B</div>
-<div v-else-if="type === "C"">C</div>
-<div v-else>Not A/B/C</div> 
+ <@div v-if="type === "A"">A</@div>
+<@div v-else-if="type === "B"">B</@div>
+<@div v-else-if="type === "C"">C</@div>
+<@div v-else>Not A/B/C</@div> 
 动态地绑定属性或prop到表达式 
- <p v-bind:attrOrProp
+ <@p v-bind:attrOrProp
   .prop = "被用于绑定DOM属性"
   .camel = "将kebab-case特性名转换为camelCase"
   .sync = "语法糖，会扩展成一个更新父组件绑定值的v-on监听器"
-></p> 
+></@p> 
  绑定事件监听器 
-<button
+<@button
   v-on:eventName
   .stop = "调用event.stopPropagation()"
   .prevent = "调用event.preventDefault()"
@@ -128,9 +128,9 @@ vm = {
   .passive = "以{passive: true}模式添加监听器"
   .{keyCode | keyAlias} = "触发特定键触事件"
 >
-</button> 
+</@button> 
  表单控件的响应式绑定 
- <input 
+ <@input 
   v-model
   .lazy = "取代input监听change事件"
   .number = "输入字符串转为数字"
