@@ -59,6 +59,7 @@ mounted: el挂载到实例后调用  beforeDestory: 实例销毁之前调用，�
 
 29.有时候需要直接在父组件中访问子组件实例，或者直接操作DOM元素，此时需要使用ref。ref被用来给元素或子元素注册引用信息。引用信息会根据父组件的$refs对象进行注册。如果在普通的DOM元素上使用，引用信息就是元素，如果用在子组件上，引用信息就是组件实例。
 
+<pre>
 let vm = new Vue();
 vm = {
   // Vue实例属性的代理
@@ -90,7 +91,7 @@ vm = {
   $nextTick: "将回调延迟到下次DOM更新循环之后执行",
   $destroy: "完全销毁一个实例",
 }
- 
+ </pre>
 
   v-text = "更新元素的textContent"
   v-html = "更新元素的innerHTML"
